@@ -1,0 +1,320 @@
+/* Define o comportamento de rolagem suave para âncoras */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reseta as margens e preenchimentos padrão em todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos globais para o corpo da página */
+body {
+    background-color: #121212; /* Define a cor de fundo */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte do texto */
+    font-size: 16px; /* Define o tamanho da fonte padrão */
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+    /* Posicionamento fixo na lateral esquerda */
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 12.25em;
+    background-color: #000000; /* Cor de fundo da barra lateral */
+    padding: 1.5em;
+}
+
+/* Estilos para o logotipo na barra lateral */
+.sidebar .logo img {
+    width: 8.125em;
+}
+
+/* Estilos para a navegação na barra lateral */
+.sidebar .navigation ul {
+    list-style: none;
+    margin-top: 1.25em;
+}
+
+/* Estilos para os itens de navegação na barra lateral */
+.sidebar .navigation ul li {
+    padding: 0.625em 0em;
+}
+
+/* Estilos para os links de navegação na barra lateral */
+.sidebar .navigation ul li a {
+    color: #b3b3b3; /* Cor do texto não selecionado */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8125em;
+}
+
+/* Estilos para os links de navegação quando hover, ativo ou focado */
+.sidebar .navigation ul li a:hover,
+.sidebar .navigation ul li a:active,
+.sidebar .navigation ul li a:focus {
+    color: #ffffff; /* Cor do texto selecionado */
+}
+
+/* Estilos para os ícones dos links de navegação */
+.sidebar .navigation ul li .fa {
+    font-size: 1.25em;
+    margin-right: 0.625em;
+}
+
+/* Estilos para os ícones dos links de navegação quando hover, ativo ou focado */
+.sidebar .navigation ul li a:hover .fa:hover,
+.sidebar .navigation ul li a:hover .fa:active,
+.sidebar .navigation ul li a:hover .fa:focus {
+    color: #ffffff;
+}
+
+/* Estilos para as políticas na barra lateral */
+.sidebar .policies {
+    position: absolute;
+    bottom: 6.25em;
+}
+
+/* Estilos para os itens das políticas */
+.sidebar .policies ul {
+    list-style: none;
+}
+
+/* Estilos para os links das políticas */
+.sidebar .policies ul li a {
+    color: #b3b3b3;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.625em;
+}
+
+/* Estilos para os links das políticas quando hover, ativo ou focado */
+.sidebar .policies ul li a:hover,
+.sidebar .policies ul li a:active,
+.sidebar .policies ul li a:focus {
+    text-decoration: underline;
+}
+
+/* Estilos para a área principal */
+.main-container {
+    margin-left: 15.3125em;
+    margin-bottom: 6.25em;
+}
+
+/* Estilos para a barra superior (topbar) */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #101010;
+    padding: 0.875em 1.875em;
+}
+
+/* Estilos para os botões de navegação anterior/próximo na barra superior */
+.topbar .prev-next-buttons button {
+    color: #7a7a7a;
+    cursor: not-allowed;
+    width: 2.125em;
+    height: 2.125em;
+    border-radius: 100%;
+    font-size: 1.125em;
+    border: 0em;
+    background-color: #090909;
+    margin-right: 0.625em;
+}
+
+/* Estilos para a navegação na barra superior */
+.topbar .navbar {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para a lista não ordenada da navegação na barra superior */
+.topbar .navbar ul {
+    list-style: none;
+}
+
+/* Estilos para os itens da navegação na barra superior */
+.topbar .navbar ul li {
+    display: inline-block;
+    margin: 0em 0.5em;
+    width: 4.375em;
+}
+
+/* Estilos para os links de navegação na barra superior */
+.topbar .navbar ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875em;
+    letter-spacing: 0.0625em;
+}
+
+/* Estilos para os links de navegação quando hover, ativo ou focado */
+.topbar .navbar ul li a:hover,
+.topbar .navbar ul li a:active,
+.topbar .navbar ul li a:focus {
+    color: #ffffff;
+    font-size: 1em;
+}
+
+/* Estilos para o divisor na barra superior */
+.topbar .navbar ul li.divider {
+    color: #ffffff;
+    font-size: 1.625em;
+    margin: 0em 1.25em;
+    width: auto;
+}
+
+/* Estilos para o botão "Log In" na barra superior */
+.topbar .navbar button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.875em 1.875em;
+    border: 0px;
+    border-radius: 2.5em;
+    cursor: pointer;
+    margin-left: 1.25em;
+}
+
+/* Estilos para o hover, ativo ou foco no botão da barra superior */
+.topbar .navbar button:hover,
+.topbar .navbar button:active,
+.topbar .navbar button:focus {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para as seções de playlists do Spotify */
+.spotify-playlists {
+    padding: 1.25em 2.5em;
+    display: flex;
+}
+
+/* Estilos para o título das seções de playlists */
+.spotify-playlists h2 {
+    color: #ffffff;
+    font-size: 1.375em;
+    margin-bottom: 1.25em;
+}
+
+/* Estilos para a lista de playlists */
+.spotify-playlists .list {
+    display: flex;
+    gap: 1.25em;
+    overflow: hidden;
+}
+
+/* Estilos para os itens individuais da lista de playlists */
+.spotify-playlists .list .item {
+    display: inline-flexbox;
+    min-width: 8.75em;
+    width: 10em;
+    padding: 0.5em;
+    background-color: #181818;
+    border-radius: 0.375em;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+/* Estilos para o hover nos itens da lista de playlists */
+.spotify-playlists .list .item:hover {
+    background-color: #252525;
+}
+
+/* Estilos para as imagens dos itens da lista de playlists */
+.spotify-playlists .list .item img {
+    width: 100%;
+    border-radius: 0.375em;
+    margin-bottom: 0.625em;
+}
+
+/* Estilos para o botão de reprodução nos itens da lista de playlists */
+.spotify-playlists .list .item .play {
+    position: relative;
+}
+
+/* Estilos para o ícone de reprodução nos itens da lista de playlists */
+.spotify-playlists .list .item .play .fa {
+    position: absolute;
+    right: 0.625em;
+    top: -3.75em;
+    padding: 1.125em;
+    background-color: #1db954;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+/* Estilos para o hover no ícone de reprodução */
+.spotify-playlists .list .item:hover .play .fa {
+    opacity: 1;
+    transform: translateY(-1.25em);
+}
+
+/* Estilos para os títulos dos itens da lista de playlists */
+.spotify-playlists .list .item h4 {
+    color: #ffffff;
+    font-size: 0.875em;
+    margin-bottom: 0.625em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilos para os textos de descrição dos itens da lista de playlists */
+.spotify-playlists .list .item p {
+    color: #989898;
+    font-size: 0.75em;
+    line-height: 1.25em;
+    font-weight: 600;
+}
+
+/* Estilos para a linha horizontal entre seções */
+.spotify-playlists hr {
+    margin: 4.375em 0em 0em;
+    border-color: #636363;
+}
+
+/* Estilos para a seção de pré-visualização (footer) */
+.preview {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 1em 2.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para o título da seção de pré-visualização */
+.preview h6 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.75em;
+    margin-bottom: 0.625em;
+}
+
+/* Estilos para o texto da seção de pré-visualização */
+.preview p {
+    color: #ffffff;
+    font-size: 0.875em;
+    font-weight: 500;
+}
+
+/* Estilos para o botão da seção de pré-visualização */
+.preview button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.875em 1.875em;
+    border: 0em;
+    border-radius: 2.5em;
+    cursor: pointer;
+}
